@@ -15,7 +15,8 @@ public class Question2 {
     			}
     		}
     	}
-    	// changed
+    	// changed state
+    	// this however is not cool
     	return false;
     }
 }
