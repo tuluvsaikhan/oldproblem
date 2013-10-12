@@ -1,7 +1,5 @@
 public class Question2 {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
           System.out.println(testForSum(new int[]{5,1,23,21,17,2,3,9,12}, 22));
 	}
     static boolean testForSum(int[] intArr, int testInt){
@@ -15,8 +13,6 @@ public class Question2 {
     			}
     		}
     	}
-    	// changed state
-    	// this however is not cool
     	return false;
     }
 }
