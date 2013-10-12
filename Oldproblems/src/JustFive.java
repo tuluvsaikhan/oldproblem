@@ -16,6 +16,7 @@ public class JustFive {
 		 getInstance();
 		 getInstance();
 		 getInstance();
+		 getInstance();
 	}
 }
 //	class Sample
