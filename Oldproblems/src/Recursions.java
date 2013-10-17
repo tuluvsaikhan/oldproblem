@@ -16,7 +16,7 @@ public class Recursions {
 		System.out.println("Reverse String of Five!" + reverseString("Five!"));
 //reverse of String
 		System.out.println("Reverse of {1,2,3,5,15,100}" + Arrays.toString(reverseArray(new int[]{1,2,3,5,15,100})));
-//XX reverse of int[]
+//reverse of int[]
 		ArrayList<String> s = perm1("Cat");
 		for(String a : s) {
 			System.out.println(a);
@@ -75,7 +75,7 @@ public class Recursions {
                perm1(results, prefix + s.charAt(i), s.substring(0, i) + s.substring(i+1, N));
         }
     }
-//permutations of array into ArrayList
+//permutations of array, return ArrayList
 	public static List<int[]> perm2(int[] s) {
 	    List<int[]> permutations = new ArrayList<>();
 	    perm2(permutations, s, s.length);
