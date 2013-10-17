@@ -15,7 +15,7 @@ public class Recursions {
 //Fibonacci: fn=fn-1 + fn-2 	1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 		System.out.println("Reverse String of Five!" + reverseString("Five!"));
 //reverse of String
-		System.out.println("Reverse of {1,2,3}" + Arrays.toString(reverseArray(new int[]{1,2,3})));
+		System.out.println("Reverse of {1,2,3,5,15,100}" + Arrays.toString(reverseArray(new int[]{1,2,3,5,15,100})));
 //XX reverse of int[]
 		ArrayList<String> s = perm1("Cat");
 		for(String a : s) {
@@ -49,8 +49,17 @@ public class Recursions {
         return reverseString(str.substring(1)) + str.charAt(0);
 	}
 //reverse of int[]
-	public static int[] reverseArray(int[] arr){
-		return new int[]{3,2,1};
+	public static int[] reverseArray(int[] x){
+		return reverse(x, 0, x.length -1);
+	}
+
+	static int[] reverse(int[] x, int i, int j){
+		if(i<j){//Swap
+			int tmp = x[i];
+			x[i] = x[j];
+			x[j] = tmp;
+			return reverse(x, ++i, --j);//Recursive
+		}  else return x;
 	}
 //permutations of String
 	private static ArrayList<String> perm1(String s){
