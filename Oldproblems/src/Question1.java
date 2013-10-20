@@ -5,10 +5,13 @@ public class Question1 {
 	    List<String> list = new ArrayList<String>(Arrays.asList(new String[] {
 	        "good", "better", "best", "best", "first", "last", "last", "last",
 	        "good"}));
+	    for (String x :list){
+	    	System.out.print(x+" ");
+	    }
 	    removeDuplicates(list);
-	    System.out.println("Using equals ");
+	    System.out.println("");
 	    for (String x : list) {
-	      System.out.println(x);
+	      System.out.print(x+" ");
 	    }
 	  }
 
