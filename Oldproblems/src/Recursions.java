@@ -6,40 +6,62 @@ public class Recursions {
 
 	public static void main(String[] args) {
 //Write a static recursive method to print out the nth term of the 
-		System.out.println("Nth element of a sequence: " + calc(4)); 
 //geometric sequence: 2, 6, 18, 54
+		System.out.println("Nth element of a sequence: " + calc(4)); 
+//Fibonacci: fn=fn-1 + fn-2 	1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 		System.out.println("Factorial of 5: " + fact(5));
 		System.out.println("5th fibonacci number: " + fibo(5));
-//Fibonacci: fn=fn-1 + fn-2 	1, 1, 2, 3, 5, 8, 13, 21, 34, 55
-		System.out.println("Reverse String of Five!" + reverseString("Five!"));
+//sum of int[]
+		System.out.println("Sum of int array {1,2,3,5,15,100} is: " + sum(new int[]{1,2,3,5,15,100}));
+//base ^ N
+		System.out.println("5 ^ 3 is: " + power(5,3));
+//sum of digits
+		System.out.println("sum of digits of 25604: "+ sumDigit(25604));
 //reverse of String
-		System.out.println("Reverse of {1,2,3,5,15,100}" + Arrays.toString(reverseArray(new int[]{1,2,3,5,15,100})));
+		System.out.println("Reverse String of Five!" + reverseString("Five!"));
 //reverse of int[]
+		System.out.println("Reverse of {1,2,3,5,15,100}" + Arrays.toString(reverseArray(new int[]{1,2,3,5,15,100})));
+//permutations of string	
 		ArrayList<String> s = perm1("Cat");
 		for(String a : s) {
 			System.out.println(a);
 		}
-//permutations of string	
+// permutations of int[]
 		List<int[]> permutations = perm2(new int[] { 1, 2, 3 });
 
 		for (int[] permutation : permutations) {
 		    System.out.println(Arrays.toString(permutation));
 		}
-// permutations of int[]
 	}
 	
 /////////////////////PROBLEM ANSWERS//////////////////////////////
-	public static int calc(int n){
+	public static int calc(int n){    // nth elem of 2, 6, 18, 54 sequence
 		if (n==1) return 2;
 		return calc(n-1)*3;
 	}
-	public static int fact(int n){
+	public static int fact(int n){   //factorial
 		if (n==1) return 1;
 		return fact(n-1)*n;
 	}
-	public static int fibo(int n){
+	public static int fibo(int n){   //fibonacci
 		if (n==1||n==2) return 1;
 		return fibo(n-1)+fibo(n-2);
+	}
+	public static int sum(int[] a){        // sum of int[]
+		int len = a.length;
+		return sum(a, len);
+	}
+	public static int sum(int[] a, int len){
+		if (len==1) return a[0];
+		return sum(a, len-1)+a[len-1];
+	}
+	public static int power(int base, int n){     //5 ^ 3
+		if(n==1) return base;
+		return power(base, n-1)*base;
+	}
+	public static int sumDigit(int a){            //sum of digits
+		if (a/10==0) return a;
+		return a%10+sumDigit(a/10);
 	}
 //reverse of String
 	public static String reverseString(String str){
