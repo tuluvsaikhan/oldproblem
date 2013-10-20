@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -7,8 +5,8 @@ import java.util.List;
 public class Recursions {
 
 	public static void main(String[] args) {
-		System.out.println("Nth element of a sequence: " + calc(4)); 
 //Write a static recursive method to print out the nth term of the 
+		System.out.println("Nth element of a sequence: " + calc(4)); 
 //geometric sequence: 2, 6, 18, 54
 		System.out.println("Factorial of 5: " + fact(5));
 		System.out.println("5th fibonacci number: " + fibo(5));
@@ -96,5 +94,6 @@ public class Recursions {
 	    int c;
 	    c = a[i]; a[i] = a[j]; a[j] = c;
 	}
+	
 
 }
