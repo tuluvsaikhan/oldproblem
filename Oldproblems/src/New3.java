@@ -32,7 +32,8 @@ public class New3 {
 	static char[] charF(char[] a, int start, int len){
 		if(start<0||len<0||start + len -1 >=a.length) return null;
 		char[] c = new char[len];
-		for(int i=start, j=0; j<len; i++, j++){c[j]=a[i];}
+		for(int i=start, j=0; j<len; i++, j++)
+			c[j]=a[i];
 		return c;
 	}
 }
